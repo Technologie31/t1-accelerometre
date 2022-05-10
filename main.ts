@@ -1,9 +1,21 @@
 basic.forever(function () {
     if (input.acceleration(Dimension.Y) < -100) {
-        basic.showIcon(IconNames.Sad)
+        basic.showLeds(`
+            . . # . .
+            . # # # .
+            # . # . #
+            . . # . .
+            . . # . .
+            `)
     } else {
         if (input.acceleration(Dimension.Y) > 100) {
-            basic.showIcon(IconNames.Happy)
+            basic.showLeds(`
+                . . # . .
+                . . # . .
+                # . # . #
+                . # # # .
+                . . # . .
+                `)
         } else {
             basic.showIcon(IconNames.Yes)
         }
